@@ -1,0 +1,89 @@
+System_Name: 'OmniMag_1Amp'
+        Workspace_Dimensions:
+        - [-0.04, 0.04]
+        - [-0.04, 0.04]
+        - [-0.04, 0.04]
+        Coil_List: [Coil_X, Coil_Y, Coil_Z, Offset]
+        Coil_X:
+          Source_List: [Src_1]
+          Src_1:
+            A_Coeff: []
+            B_Coeff:
+            - [1]
+            - [0]
+            - [0]
+            Source_Position:
+            - [0]
+            - [0]
+            - [-0.20]
+            Source_Direction:
+            - [1]
+            - [0]
+            - [0]
+        Coil_Y:
+          Source_List: [Src_1]
+          Src_1:
+            A_Coeff: []
+            B_Coeff:
+            - [1]
+            - [0]
+            - [0]
+            Source_Position:
+            - [0]
+            - [0]
+            - [-0.20]
+            Source_Direction:
+            - [0]
+            - [1]
+            - [0]
+        Coil_Z:
+          Source_List: [Src_1]
+          Src_1:
+            A_Coeff: []
+            B_Coeff:
+            - [1]
+            - [0]
+            - [0]
+            Source_Position:
+            - [0]
+            - [0]
+            - [-0.20]
+            Source_Direction:
+            - [0]
+            - [0]
+            - [1]
+        Offset:
+          Source_List: [X_Offset, Y_Offset, Z_Offset]
+          X_Offset:
+            A_Coeff: [0]
+            B_Coeff: []
+            Source_Position:
+            - [0]
+            - [0]
+            - [0]
+            Source_Direction:
+            - [1]
+            - [0]
+            - [0]
+          Y_Offset:
+            A_Coeff: [0]
+            B_Coeff: []
+            Source_Position:
+            - [0]
+            - [0]
+            - [0]
+            Source_Direction:
+            - [0]
+            - [1]
+            - [0]
+          Z_Offset:
+            A_Coeff: [0]
+            B_Coeff: []
+            Source_Position:
+            - [0]
+            - [0]
+            - [0]
+            Source_Direction:
+            - [0]
+            - [0]
+            - [1]
