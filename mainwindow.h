@@ -4,9 +4,9 @@
 #include <QMainWindow>
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Eigen>
-#include <yaml-cpp/yaml.h>
+#include <electromagnet-calibration/EigenToYAML.h>
 #include <electromagnet-calibration/electromagnet_calibration.h>
-
+#include <vector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,14 +19,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void addPointFileData(QString filename, Eigen::Vector3d vecToMag);
+    void addPointFileData(QString filename, Eigen::Vector3d current_vector, std::vector< MagneticMeasurement> &dataList);
 
-    const std::vector< MagneticMeasurement> dataList1;
-    const std::vector< MagneticMeasurement> dataList20;
-    const std::vector< MagneticMeasurement> dataList40;
+    std::vector< MagneticMeasurement> dataList1;
+    std::vector< MagneticMeasurement> dataList20;
+    std::vector< MagneticMeasurement> dataList40;
 
     void buildCalibMap();
     void calibrateMagnets();
+
+    ElectromagnetCalibration omnimagnet_cal_1amp = ElectromagnetCalibration("inital_guess.yaml");
+    ElectromagnetCalibration omnimagnet_cal_20amp = ElectromagnetCalibration("inital_guess.yaml");
+    ElectromagnetCalibration omnimagnet_cal_40amp = ElectromagnetCalibration("inital_guess.yaml");
 
 private:
     Ui::MainWindow *ui;
